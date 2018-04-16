@@ -3,6 +3,7 @@ package com.sam.wayOfIterateList;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Spliterator;
 
 public class WayOfIterateList {
 	public static void main(String[] args) {
@@ -46,6 +47,13 @@ public class WayOfIterateList {
 		strList.forEach((obj) -> {
 			System.out.println(obj);
 		});
+		
+		//6. using Spliterator
+		System.out.println("6. using Spliterator ");
+		Spliterator<String> sitr = strList.spliterator();
+		sitr.forEachRemaining(System.out::println);
+		
+		
 
 	}
 }
